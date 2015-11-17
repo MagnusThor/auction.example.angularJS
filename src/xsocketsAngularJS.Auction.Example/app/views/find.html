@@ -1,0 +1,44 @@
+﻿
+
+<h2>Find items</h2>
+
+<div>
+    <input type="text" ng-keyup="find($event)"/>
+</div>
+<h3>Results&nbsp;<small></small></h3>
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                Description
+            </td>
+            <td>
+                Start price
+            </td>
+            <td>
+                Current price
+            </td>
+            <td>
+                Created
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in results">
+            <td>
+                <a href="#/item/{{item.Id}}">
+                    {{item.Name}}
+                </a>
+            </td>
+            <td>{{item.Description}}</td>
+            <td>{{item.Price}}</td>
+            <td> {{item.Bids.slice(-1)[0].Bid}} &nbsp;({{item.Bids.length}})</td>
+            <td>{{item.Created | date:'yyyy-mm-dd hh:MM:ss'}}</td>
+
+        </tr>
+    </tbody>
+</table>

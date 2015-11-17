@@ -1,0 +1,40 @@
+﻿<h2>10 latest Items</h2>
+
+<mark>{{items.length}}</mark>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                Description
+            </td>
+            <td>
+                Start price
+            </td>
+            <td>
+                Current price
+            </td>
+            <td>
+               Created
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in items">
+            <td>
+                <a href="#/item/{{item.Id}}">
+                    {{item.Name}}
+                </a>
+            </td>
+            <td>{{item.Description}}</td>
+            <td>{{item.Price}}</td>
+            <td> {{item.Bids.slice(-1)[0].Bid}} &nbsp;({{item.Bids.length}})</td>
+            <td>{{item.Created | date:'yyyy-mm-dd hh:MM:ss'}}</td>
+           
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>xsocketsAngularJS - Auction Example</title>
+    <meta charset="utf-8"/>
+    <style>
+        table {
+            width: 100%;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+              margin-top: 10px;
+        }
+    </style>
+</head>
+<body ng-app="auctionApp">
+<nav>
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#register">Register</a></li>
+    <li><a href="#find">Search & find</a></li>
+</ul>
+</nav>
+    <header></header>
+    <section ng-view></section>
+    <footer></footer>
+
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="js/xsockets.controller.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/contollers/controllers.js"></script>
+    <script src="app/services/services.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<h2>Item #{{item.Id}}</h2>
+
+<h3>{{item.Name}}</h3>
+<p>
+    {{item.Description}}
+</p>
+<div>
+    <mark>{{item.Price.toFixed(2)}} SEK</mark>
+</div>
+<ul>
+    <li ng-repeat="b in item.Bids">
+        {{b.Bid}}
+
+    </li>
+</ul>
+<hr/>
+<h4>Place bid on the '{{item.Name}}'</h4>
+<form>
+    <input type="number" ng-model="bid.Bid" min="{{item.Price}}"/>
+    <button ng-click="placeBid()">Place bid</button>
+    {{bid.ItemId}}
+</form>
